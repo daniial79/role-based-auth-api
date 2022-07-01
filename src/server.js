@@ -1,5 +1,6 @@
 //importing modules
 import {app as server} from './app.js';
+import { dbConnector } from './utils/database.js';
 
-//testing server
-server.listen(process.env.PORT, process.env.HOST_NAME, () => console.log('server is alive'));
+//setting the server up and connect it to database
+dbConnector(server);  
