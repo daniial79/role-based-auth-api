@@ -4,7 +4,8 @@
   "description": "simple api with role based authentication purpose (just for practice)",
   "main": "./src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "env-cmd -f ./.env nodemon ./src/server.js --exec babel-node"
   },
   "repository": {
     "type": "git",
