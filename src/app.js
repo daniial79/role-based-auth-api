@@ -8,5 +8,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+//importing auth routers
+import {router as authRoutes} from './routes/auth.routes.js';
+
+//applying router
+app.use('/api', authRoutes);
+
 //exporting section
 export {app};
