@@ -13,5 +13,8 @@ import authErrorHandlers from '../errors/auth.errorhandlers.js';
 //signing up new user with default role
 router.post('/signup', authControllers.singUpUser, authErrorHandlers.signUpNewUserErrorHandler);
 
+//logging in with user credentials
+router.post('/login', authControllers.logInUser, authErrorHandlers.logInUserErrorHandler);
+
 //exporting section
 export { router }
